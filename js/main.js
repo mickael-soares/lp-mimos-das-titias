@@ -7,7 +7,7 @@
 // CONFIGURAÇÃO CENTRAL (Altere aqui o WhatsApp quando for para produção)
 // =========================================================================
 const CONFIG = {
-  whatsappNumber: '5565999964446',
+  whatsappNumber: '556593608299',
   brandName: 'Ateliê Mimos das Titias',
   instagramHandle: '@_kitminifesta.personalizados_',
   packagingExtraPrice: 3.00, // Acréscimo celofane + laço nas lembrancinhas
