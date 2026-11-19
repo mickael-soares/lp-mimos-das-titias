@@ -1,0 +1,821 @@
+<!--
+  =============================================================
+  Projeto: Ateliê Mimos das Titias - Landing Page & Simulador
+  Instagram: @_kitminifesta.personalizados_
+  Desenvolvido por: Mickael Soares
+  Ano: 2026 • Várzea Grande & Cuiabá - MT • Envio Nacional
+  =============================================================
+-->
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ateliê Mimos das Titias | Kit Mini Festa e Papelaria Personalizada</title>
+  <meta name="description" content="Ateliê Mimos das Titias: Kits Festa na Mesa em Várzea Grande e Cuiabá e Papelaria Personalizada (Caixaria, Acrílicos, Lembrancinhas, Kit Cinema e Master) com envio para todo o Brasil. Monte seu orçamento online!">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Mickael Soares">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23C5ECFF'/%3E%3Cg fill='none' stroke='%231665B8' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M23 12L35 33M41 12L29 33'/%3E%3Cellipse cx='22' cy='43' rx='6' ry='8' transform='rotate(14 22 43)'/%3E%3Cellipse cx='42' cy='43' rx='6' ry='8' transform='rotate(-14 42 43)'/%3E%3C/g%3E%3Cpath d='M32 54.5s-3.5-2.3-3.5-4.6a2.1 2.1 0 0 1 3.5-1.5 2.1 2.1 0 0 1 3.5 1.5c0 2.3-3.5 4.6-3.5 4.6z' fill='%2338BDF8'/%3E%3C/svg%3E">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ateliê Mimos das Titias | Kit Mini Festa e Papelaria Personalizada">
+  <meta property="og:description" content="Personalizados em papelaria com acabamento de luxo para todo o Brasil e Kits Festa na Mesa em VG e Cuiabá. Simule seu orçamento e envie direto no WhatsApp!">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Cormorant Garamond + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            atelie: {
+              sky: '#C5ECFF',
+              ice: '#EDF8FE',
+              blue: '#1665B8',
+              deep: '#0F3D75',
+              gold: '#C9A45C',
+              goldSoft: '#FBF5E8',
+              blush: '#F9E4E8',
+              paper: '#FAFBFD',
+              ink: '#1E2E42'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans text-atelie-ink selection:bg-atelie-sky selection:text-atelie-deep pb-24">
+
+  <!-- =========================================================
+       HEADER FIXO
+  ========================================================= -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-atelie-sky/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
+      <!-- Marca / Logo Vetorial -->
+      <a href="#inicio" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full bg-atelie-sky flex items-center justify-center border border-atelie-blue/20 shadow-sm group-hover:scale-105 transition">
+          <svg viewBox="0 0 64 64" class="w-8 h-8 text-atelie-blue" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M23 10L35 33M41 10L29 33" />
+            <ellipse cx="22" cy="43" rx="6" ry="8" transform="rotate(14 22 43)" />
+            <ellipse cx="42" cy="43" rx="6" ry="8" transform="rotate(-14 42 43)" />
+            <path d="M32 54.5s-3.5-2.3-3.5-4.6a2.1 2.1 0 0 1 3.5-1.5 2.1 2.1 0 0 1 3.5 1.5c0 2.3-3.5 4.6-3.5 4.6z" fill="#38BDF8" stroke="none" />
+          </svg>
+        </div>
+        <div class="leading-tight">
+          <span class="block font-display text-2xl font-bold tracking-wide text-atelie-deep leading-none">ATELIÊ</span>
+          <span class="block text-[11px] font-extrabold uppercase tracking-[0.18em] text-atelie-blue mt-0.5">Mimos das Titias</span>
+        </div>
+      </a>
+
+      <!-- Navegação Desktop -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600">
+        <a href="#kit-mesa" class="hover:text-atelie-blue transition">Kit na Mesa</a>
+        <a href="#catalogo" class="hover:text-atelie-blue transition">Catálogo &amp; Valores</a>
+        <a href="#sob-orcamento" class="hover:text-atelie-blue transition">Sob Orçamento</a>
+        <a href="#como-funciona" class="hover:text-atelie-blue transition">Como Funciona</a>
+        <a href="#duvidas" class="hover:text-atelie-blue transition">Dúvidas</a>
+      </nav>
+
+      <!-- Ações Header -->
+      <div class="flex items-center gap-2.5">
+        <button
+          type="button"
+          onclick="openBudgetDrawer()"
+          class="relative inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-atelie-ice hover:bg-atelie-sky text-atelie-blue font-bold text-sm border border-atelie-sky transition cursor-pointer"
+        >
+          <i class="fa-solid fa-clipboard-list"></i>
+          <span class="hidden sm:inline">Meu Orçamento</span>
+          <span id="header-budget-badge" class="hidden absolute -top-1.5 -right-1.5 min-w-[22px] h-[22px] px-1 rounded-full bg-atelie-blue text-white text-[11px] font-extrabold flex items-center justify-center shadow">0</span>
+        </button>
+
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="lg:hidden w-10 h-10 rounded-full bg-slate-100 text-atelie-deep flex items-center justify-center"
+          aria-label="Abrir menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-atelie-sky/60 px-6 py-4 space-y-3 text-sm font-semibold text-slate-700">
+      <a href="#kit-mesa" class="block py-1 hover:text-atelie-blue">Kit Festa na Mesa</a>
+      <a href="#catalogo" class="block py-1 hover:text-atelie-blue">Catálogo &amp; Valores</a>
+      <a href="#sob-orcamento" class="block py-1 hover:text-atelie-blue">Outros Itens (Sob Orçamento)</a>
+      <a href="#como-funciona" class="block py-1 hover:text-atelie-blue">Como Funciona</a>
+      <a href="#duvidas" class="block py-1 hover:text-atelie-blue">Dúvidas Frequentes</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         HERO SECTION
+    ========================================================= -->
+    <section id="inicio" class="bg-atelier-pattern relative overflow-hidden pt-12 pb-16 lg:pt-20 lg:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <!-- Texto Hero -->
+        <div class="lg:col-span-7 fade-up">
+          <div class="flex flex-wrap items-center gap-2 mb-5">
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/90 border border-atelie-sky text-xs font-bold text-atelie-blue shadow-sm">
+              <i class="fa-solid fa-location-dot"></i> Várzea Grande &amp; Cuiabá - MT
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-atelie-goldSoft border border-atelie-gold/40 text-xs font-bold text-atelie-deep shadow-sm">
+              <i class="fa-solid fa-truck-fast text-atelie-gold"></i> Personalizados para todo o Brasil
+            </span>
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-atelie-deep leading-[1.06]">
+            Cada detalhe da sua festa feito à mão com
+            <span class="italic text-atelie-blue">carinho e luxo.</span>
+          </h1>
+
+          <p class="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
+            Do <strong>Kit Festa na Mesa</strong> pronto para encantar em VG e Cuiabá até a <strong>papelaria personalizada</strong> com apliques 3D, cetim e pedraria enviada para todo o Brasil.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3.5">
+            <a
+              href="#catalogo"
+              class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-atelie-blue hover:bg-atelie-deep text-white font-bold text-sm sm:text-base shadow-lg shadow-atelie-blue/25 transition"
+            >
+              <i class="fa-solid fa-calculator"></i>
+              <span>Simular Meu Orçamento</span>
+            </a>
+            <button
+              type="button"
+              onclick="openDirectWhatsApp()"
+              class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-white hover:bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold text-sm sm:text-base shadow-sm transition cursor-pointer"
+            >
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Falar no WhatsApp</span>
+            </button>
+          </div>
+
+          <div class="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-semibold text-slate-500">
+            <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-atelie-blue"></i> Valores transparentes no site</span>
+            <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-atelie-blue"></i> Qualquer tema infantil ou adulto</span>
+            <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-atelie-blue"></i> Orçamento direto no WhatsApp</span>
+          </div>
+        </div>
+
+        <!-- Vitrine Boutique Hero -->
+        <div class="lg:col-span-5 fade-up">
+          <div class="relative bg-white/95 rounded-[2rem] p-6 sm:p-7 border border-atelie-sky shadow-xl shadow-atelie-blue/10">
+            <div class="stitch-border rounded-3xl p-5 bg-gradient-to-br from-atelie-ice/70 via-white to-atelie-goldSoft/50">
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-atelie-blue">Destaques do Ateliê</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-bold text-atelie-gold bg-white px-2.5 py-1 rounded-full border border-atelie-gold/30">
+                  <i class="fa-solid fa-crown text-[10px]"></i> Artesanal
+                </span>
+              </div>
+
+              <div class="space-y-3.5">
+                <a href="#kit-mesa" class="flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-white border border-slate-100 hover:border-atelie-blue/40 transition shadow-sm">
+                  <div class="flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-xl bg-atelie-sky/60 text-atelie-blue flex items-center justify-center shrink-0">
+                      <i class="fa-solid fa-cake-candles"></i>
+                    </span>
+                    <div>
+                      <p class="font-bold text-atelie-deep text-sm">Kit Festa na Mesa</p>
+                      <p class="text-xs text-slate-500">Painel + bandejas + arco • VG/Cuiabá</p>
+                    </div>
+                  </div>
+                  <span class="text-right shrink-0">
+                    <span class="block text-[10px] uppercase text-slate-400 font-bold">A partir de</span>
+                    <span class="text-sm font-extrabold text-atelie-blue">R$ 60</span>
+                  </span>
+                </a>
+
+                <a href="#catalogo" class="flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-white border border-slate-100 hover:border-atelie-blue/40 transition shadow-sm">
+                  <div class="flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-xl bg-atelie-ice text-atelie-blue flex items-center justify-center shrink-0">
+                      <i class="fa-solid fa-box-open"></i>
+                    </span>
+                    <div>
+                      <p class="font-bold text-atelie-deep text-sm">Caixaria &amp; Acrílicos</p>
+                      <p class="text-xs text-slate-500">Linhas Básico, Luxo e Master 3D</p>
+                    </div>
+                  </div>
+                  <span class="text-right shrink-0">
+                    <span class="block text-[10px] uppercase text-slate-400 font-bold">A partir de</span>
+                    <span class="text-sm font-extrabold text-atelie-blue">R$ 5</span>
+                  </span>
+                </a>
+
+                <a href="#catalogo" class="flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-gradient-to-r from-atelie-goldSoft to-white border border-atelie-gold/40 hover:border-atelie-gold transition shadow-sm">
+                  <div class="flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-xl bg-atelie-gold/20 text-atelie-gold flex items-center justify-center shrink-0">
+                      <i class="fa-solid fa-gem"></i>
+                    </span>
+                    <div>
+                      <p class="font-bold text-atelie-deep text-sm">Personalizados Master</p>
+                      <p class="text-xs text-slate-500">Nutella, Cofrinho, KitKat e Jujuba</p>
+                    </div>
+                  </div>
+                  <span class="text-right shrink-0">
+                    <span class="block text-[10px] uppercase text-atelie-gold font-bold">Strass &amp; Cetim</span>
+                    <span class="text-sm font-extrabold text-atelie-deep">R$ 13+</span>
+                  </span>
+                </a>
+              </div>
+
+              <div class="mt-5 pt-4 border-t border-atelie-sky/60 flex items-center justify-between text-xs text-slate-500">
+                <span><i class="fa-brands fa-instagram text-atelie-blue mr-1"></i>@_kitminifesta.personalizados_</span>
+                <a href="https://www.instagram.com/_kitminifesta.personalizados_/" target="_blank" rel="noopener noreferrer" class="font-bold text-atelie-blue hover:underline">Ver feed →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FAIXA DE DIFERENCIAIS
+    ========================================================= -->
+    <section class="py-10 bg-white border-y border-slate-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="flex items-start gap-3">
+          <span class="w-10 h-10 rounded-2xl bg-atelie-ice text-atelie-blue flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-scissors"></i>
+          </span>
+          <div>
+            <h3 class="font-bold text-sm text-atelie-deep">Acabamento Artesanal</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Camadas 3D, laços de cetim, fitas nobres e pedraria.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-10 h-10 rounded-2xl bg-atelie-ice text-atelie-blue flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </span>
+          <div>
+            <h3 class="font-bold text-sm text-atelie-deep">No Seu Tema</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Personalizado com nome, idade e paleta da festa.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-10 h-10 rounded-2xl bg-atelie-ice text-atelie-blue flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-location-dot"></i>
+          </span>
+          <div>
+            <h3 class="font-bold text-sm text-atelie-deep">VG e Cuiabá - MT</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Kits Festa na Mesa e Arcos de Balões locais.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <span class="w-10 h-10 rounded-2xl bg-atelie-goldSoft text-atelie-gold flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-earth-americas"></i>
+          </span>
+          <div>
+            <h3 class="font-bold text-sm text-atelie-deep">Envio Nacional</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Papelaria e lembrancinhas enviadas para todo o Brasil.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         DESTAQUE LOCAL: KIT FESTA NA MESA (VG & CUIABÁ)
+    ========================================================= -->
+    <section id="kit-mesa" class="py-16 lg:py-20 bg-atelie-paper">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto fade-up">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-atelie-ice border border-atelie-sky text-xs font-bold text-atelie-blue uppercase tracking-wider">
+            <i class="fa-solid fa-location-dot"></i> Exclusivo Várzea Grande e Cuiabá
+          </span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold text-atelie-deep mt-3">
+            Kit Festa na Mesa
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2">
+            Praticidade para celebrar em casa com visual encantador. Escolha o seu combo e adicione direto ao simulador de orçamento.
+          </p>
+        </div>
+
+        <div class="mt-10 grid md:grid-cols-2 gap-6 max-w-4xl mx-auto fade-up">
+          <!-- Kit R$ 60 -->
+          <article id="card-kit-mesa-essencial" class="product-card bg-white border border-slate-200 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="relative mb-5 rounded-3xl overflow-hidden bg-white aspect-square group cursor-zoom-in border border-slate-100 shadow-xs" onclick="openLightbox('images/kit-mesa-essencial.webp', 'Kit Festa na Mesa Essencial', 'R$ 60,00 / kit')">
+                <img src="images/kit-mesa-essencial.webp" alt="Kit Festa na Mesa Essencial - Ateliê Mimos das Titias" loading="lazy" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300" />
+                <span class="absolute bottom-2.5 right-2.5 bg-black/55 text-white text-[10px] font-semibold px-2.5 py-1 rounded-full">
+                  <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Ampliar
+                </span>
+              </div>
+
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-atelie-ice text-atelie-blue">Combo Essencial</span>
+                <span class="text-xs font-semibold text-slate-400">VG &amp; Cuiabá</span>
+              </div>
+
+              <h3 class="font-display text-3xl font-bold text-atelie-deep mt-4">Kit Festa na Mesa Essencial</h3>
+              <div class="mt-3 flex items-baseline gap-1.5">
+                <span class="text-4xl font-extrabold text-atelie-blue">R$ 60,00</span>
+                <span class="text-xs font-semibold text-slate-400">/ kit</span>
+              </div>
+
+              <ul class="mt-6 space-y-3 text-sm text-slate-600">
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-atelie-blue"></i> Painel redondo 50x50</li>
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-atelie-blue"></i> 4 bandejas coordenadas</li>
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-atelie-blue"></i> 1 boleira central</li>
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-atelie-blue"></i> 2 displays no tema</li>
+              </ul>
+            </div>
+
+            <div id="ctrl-kit-mesa-essencial" class="mt-7 pt-5 border-t border-slate-100"></div>
+          </article>
+
+          <!-- Kit R$ 80 (Mais Pedido) -->
+          <article id="card-kit-mesa-completo" class="product-card bg-gradient-to-b from-atelie-ice/60 to-white border-2 border-atelie-blue/50 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-md relative">
+            <div>
+              <div class="relative mb-5 rounded-3xl overflow-hidden bg-atelie-ice aspect-square group cursor-zoom-in border border-atelie-sky/80 shadow-xs" onclick="openLightbox('images/kit-mesa-completo.webp', 'Kit Festa na Mesa Completo', 'R$ 80,00 / kit')">
+                <img src="images/kit-mesa-completo.webp" alt="Kit Festa na Mesa Completo - Ateliê Mimos das Titias" loading="lazy" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300" />
+                <span class="absolute bottom-2.5 right-2.5 bg-black/55 text-white text-[10px] font-semibold px-2.5 py-1 rounded-full">
+                  <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Ampliar
+                </span>
+              </div>
+
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-atelie-blue text-white">
+                  <i class="fa-solid fa-star text-[10px]"></i> Mais Pedido
+                </span>
+                <span class="text-xs font-semibold text-atelie-blue">Com Mini Arco de Balão</span>
+              </div>
+
+              <h3 class="font-display text-3xl font-bold text-atelie-deep mt-4">Kit Festa na Mesa Completo</h3>
+              <div class="mt-3 flex items-baseline gap-1.5">
+                <span class="text-4xl font-extrabold text-atelie-blue">R$ 80,00</span>
+                <span class="text-xs font-semibold text-slate-400">/ kit</span>
+              </div>
+
+              <ul class="mt-6 space-y-3 text-sm text-slate-700 font-medium">
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-atelie-blue"></i> Painel redondo 50x50</li>
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-atelie-blue"></i> Lona personalizada no tema</li>
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-atelie-blue"></i> 4 bandejas coordenadas</li>
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-atelie-blue"></i> 1 boleira central</li>
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-sparkles text-atelie-gold"></i> <strong>1 mini arco de balão</strong></li>
+              </ul>
+            </div>
+
+            <div id="ctrl-kit-mesa-completo" class="mt-7 pt-5 border-t border-atelie-sky/70"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CATÁLOGO INTERATIVO & SIMULADOR DE VALORES
+    ========================================================= -->
+    <section id="catalogo" class="py-16 lg:py-24 bg-white border-t border-slate-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 fade-up">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-widest text-atelie-blue">Tabela Oficial Interativa</span>
+            <h2 class="font-display text-3xl sm:text-5xl font-bold text-atelie-deep mt-1">
+              Monte seu Orçamento
+            </h2>
+            <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-2xl">
+              Navegue pelas categorias, adicione as quantidades desejadas e envie a lista completa com valores direto para o nosso WhatsApp.
+            </p>
+          </div>
+          <button
+            type="button"
+            onclick="openBudgetDrawer()"
+            class="self-start md:self-auto inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-atelie-goldSoft hover:bg-atelie-gold/20 text-atelie-deep border border-atelie-gold/40 text-xs font-bold transition cursor-pointer"
+          >
+            <i class="fa-solid fa-receipt text-atelie-gold"></i>
+            <span>Ver Resumo do Orçamento</span>
+          </button>
+        </div>
+
+        <!-- Abas de Categorias -->
+        <div
+          id="catalog-tabs"
+          class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 mb-6"
+          role="tablist"
+          aria-label="Categorias do catálogo"
+        ></div>
+
+        <!-- Painel Dinâmico -->
+        <div id="catalog-panel" class="min-h-[320px]"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         OUTROS ITENS (SOB ORÇAMENTO)
+    ========================================================= -->
+    <section id="sob-orcamento" class="py-16 bg-atelie-ice/55 border-y border-atelie-sky/60">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mb-8 fade-up">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-atelie-blue">Complementos Personalizados</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-atelie-deep mt-1">
+            Outros Itens (Sob Orçamento)
+          </h2>
+          <p class="text-sm text-slate-600 mt-2">
+            Clique nos itens abaixo para incluir automaticamente na sua mensagem de orçamento no WhatsApp.
+          </p>
+        </div>
+
+        <div id="custom-quote-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 fade-up"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         COMO FUNCIONA (3 PASSOS)
+    ========================================================= -->
+    <section id="como-funciona" class="py-16 lg:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-xl mx-auto mb-12 fade-up">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-atelie-blue">Simples e Rápido</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-atelie-deep mt-1">
+            Como funciona seu pedido
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 fade-up">
+          <div class="p-6 rounded-3xl bg-atelie-paper border border-slate-100 relative">
+            <span class="font-display text-5xl font-bold text-atelie-sky absolute top-4 right-5 select-none">01</span>
+            <div class="w-11 h-11 rounded-2xl bg-atelie-blue text-white flex items-center justify-center mb-4">
+              <i class="fa-solid fa-list-check"></i>
+            </div>
+            <h3 class="font-bold text-lg text-atelie-deep">Simule no Site</h3>
+            <p class="text-sm text-slate-600 mt-2">
+              Escolha seus kits, caixaria, lembrancinhas e quantidades. O valor estimado é calculado automaticamente.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-atelie-paper border border-slate-100 relative">
+            <span class="font-display text-5xl font-bold text-atelie-sky absolute top-4 right-5 select-none">02</span>
+            <div class="w-11 h-11 rounded-2xl bg-atelie-blue text-white flex items-center justify-center mb-4">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </div>
+            <h3 class="font-bold text-lg text-atelie-deep">Envie no WhatsApp</h3>
+            <p class="text-sm text-slate-600 mt-2">
+              Com 1 clique, a lista completa com tema, nome e idade vai pronta para confirmarmos prazo e detalhes.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-atelie-paper border border-slate-100 relative">
+            <span class="font-display text-5xl font-bold text-atelie-sky absolute top-4 right-5 select-none">03</span>
+            <div class="w-11 h-11 rounded-2xl bg-atelie-gold text-white flex items-center justify-center mb-4">
+              <i class="fa-solid fa-gift"></i>
+            </div>
+            <h3 class="font-bold text-lg text-atelie-deep">Receba com Encanto</h3>
+            <p class="text-sm text-slate-600 mt-2">
+              Produção artesanal feita sob medida. Atendemos VG e Cuiabá presencialmente e enviamos personalizados para todo o Brasil.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FAQ (DÚVIDAS FREQUENTES)
+    ========================================================= -->
+    <section id="duvidas" class="py-16 bg-atelie-paper border-t border-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10 fade-up">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-atelie-blue">Transparência</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-atelie-deep mt-1">
+            Dúvidas Frequentes
+          </h2>
+        </div>
+
+        <div class="space-y-3 fade-up">
+          <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden">
+            <button type="button" class="faq-trigger w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-atelie-deep cursor-pointer">
+              <span>Os itens de caixaria, acrílicos e lembrancinhas vão recheados?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron text-xs text-atelie-blue transition-transform"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="overflow-hidden">
+                <p class="px-5 pb-4 text-sm text-slate-600">
+                  Caixaria, acrílicos, lembrancinhas, centro de mesa e Kit Cinema Básico vão <strong>vazios</strong> para você rechear como preferir. Já o <strong>Kit Cinema Luxo</strong> inclui pipoca + refri/suco, e os <strong>Kits Diversão / Pintura</strong> já vão com todos os itens inclusos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden">
+            <button type="button" class="faq-trigger w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-atelie-deep cursor-pointer">
+              <span>Vocês enviam para fora de Cuiabá e Várzea Grande?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron text-xs text-atelie-blue transition-transform"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="overflow-hidden">
+                <p class="px-5 pb-4 text-sm text-slate-600">
+                  Sim! Enviamos personalizados em papelaria para <strong>todo o Brasil</strong>. Os Kits Festa na Mesa e Arcos de Balões são exclusivos para atendimento em <strong>Várzea Grande e Cuiabá - MT</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden">
+            <button type="button" class="faq-trigger w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-atelie-deep cursor-pointer">
+              <span>Qual a diferença entre Básico, Luxo e Master?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron text-xs text-atelie-blue transition-transform"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="overflow-hidden">
+                <div class="px-5 pb-4 text-sm text-slate-600 space-y-1.5">
+                  <p><strong>Básico:</strong> personalizado no tema com nome e idade (sem aplique 3D e sem laço de cetim).</p>
+                  <p><strong>Luxo:</strong> ganha aplique em camadas 3D e laço de cetim coordenado.</p>
+                  <p><strong>Master:</strong> nosso acabamento joia com apliques 3D, laço de cetim, strass, pedraria e fitas nobres.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden">
+            <button type="button" class="faq-trigger w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-atelie-deep cursor-pointer">
+              <span>Posso escolher qualquer tema que não esteja no Instagram?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron text-xs text-atelie-blue transition-transform"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="overflow-hidden">
+                <p class="px-5 pb-4 text-sm text-slate-600">
+                  Com certeza! Criamos artes sob medida para temas infantis, chá revelação, mesversário, teen e festas adultas. Basta informar o tema ao enviar seu orçamento no WhatsApp.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CTA FINAL
+    ========================================================= -->
+    <section class="py-16 px-4 sm:px-6 bg-white">
+      <div class="max-w-5xl mx-auto rounded-[2rem] bg-gradient-to-br from-atelie-deep via-atelie-blue to-[#1E7AD6] p-8 sm:p-12 text-center text-white shadow-xl relative overflow-hidden fade-up">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/15 text-xs font-bold uppercase tracking-wider mb-4">
+            <i class="fa-solid fa-sparkles text-atelie-sky"></i> Ateliê Mimos das Titias
+          </span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold leading-tight">
+            Pronta para deixar sua festa inesquecível?
+          </h2>
+          <p class="text-atelie-sky/90 text-sm sm:text-base mt-3">
+            Simule seus itens no catálogo ou chame diretamente no WhatsApp para montar um projeto exclusivo no seu tema.
+          </p>
+          <div class="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+            <button
+              type="button"
+              onclick="openBudgetDrawer()"
+              class="px-7 py-3.5 rounded-2xl bg-white text-atelie-deep hover:bg-atelie-ice font-bold text-sm transition cursor-pointer shadow-md"
+            >
+              <i class="fa-solid fa-clipboard-list mr-2"></i>Revisar Meu Orçamento
+            </button>
+            <button
+              type="button"
+              onclick="openDirectWhatsApp()"
+              class="px-7 py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm transition cursor-pointer shadow-md"
+            >
+              <i class="fa-brands fa-whatsapp mr-2 text-base"></i>Chamar no WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+  <footer class="bg-atelie-deep text-slate-300 py-10 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
+        <div class="flex items-center gap-3.5 text-center md:text-left">
+          <div class="w-11 h-11 rounded-full bg-atelie-sky flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 64 64" class="w-7 h-7 text-atelie-blue" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M23 10L35 33M41 10L29 33" />
+              <ellipse cx="22" cy="43" rx="6" ry="8" transform="rotate(14 22 43)" />
+              <ellipse cx="42" cy="43" rx="6" ry="8" transform="rotate(-14 42 43)" />
+              <path d="M32 54.5s-3.5-2.3-3.5-4.6a2.1 2.1 0 0 1 3.5-1.5 2.1 2.1 0 0 1 3.5 1.5c0 2.3-3.5 4.6-3.5 4.6z" fill="#38BDF8" stroke="none" />
+            </svg>
+          </div>
+          <div>
+            <p class="font-display text-2xl font-bold text-white leading-none">Ateliê Mimos das Titias</p>
+            <p class="text-xs text-atelie-sky/80 mt-1">Várzea Grande e Cuiabá - MT • Enviamos para todo o Brasil</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a
+            href="https://www.instagram.com/_kitminifesta.personalizados_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition"
+          >
+            <i class="fa-brands fa-instagram"></i> @_kitminifesta.personalizados_
+          </a>
+          <button
+            type="button"
+            onclick="openDirectWhatsApp()"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-semibold transition cursor-pointer"
+          >
+            <i class="fa-brands fa-whatsapp"></i> (65) 99996-4446
+          </button>
+        </div>
+      </div>
+
+      <!-- Barra de Copyright e Autoria -->
+      <div class="mt-7 pt-5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-400 text-center sm:text-left">
+        <p>© 2026 Ateliê Mimos das Titias. Todos os direitos reservados.</p>
+        <div class="flex items-center justify-center sm:justify-end gap-2.5">
+          <span>Desenvolvido por <a href="https://github.com/mickael-soares/" target="_blank" rel="noopener noreferrer" class="text-atelie-sky/90 hover:text-white font-semibold transition">Mickael Soares</a></span>
+          <span class="text-white/20" aria-hidden="true">•</span>
+          <div class="flex items-center gap-2.5">
+            <a href="https://github.com/mickael-soares/" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Mickael Soares" title="GitHub" class="text-slate-400 hover:text-white transition text-xs">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mickael-s-97755098/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Mickael Soares" title="LinkedIn" class="text-slate-400 hover:text-white transition text-xs">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       BARRA FLUTUANTE INFERIOR DO ORÇAMENTO (APARECE AO ADICIONAR ITENS)
+  ========================================================= -->
+  <div id="sticky-budget-bar" class="sticky-budget-bar fixed bottom-4 inset-x-4 z-40 max-w-2xl mx-auto">
+    <div class="bg-atelie-deep text-white rounded-2xl p-3.5 sm:px-5 shadow-2xl border border-white/15 flex items-center justify-between gap-3">
+      <div class="min-w-0">
+        <span id="sticky-budget-count" class="block text-[11px] font-bold uppercase tracking-wider text-atelie-sky">0 itens</span>
+        <span id="sticky-budget-total" class="text-lg sm:text-xl font-extrabold leading-tight">R$ 0,00</span>
+      </div>
+      <button
+        type="button"
+        onclick="openBudgetDrawer()"
+        class="shrink-0 inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-white font-bold text-xs sm:text-sm transition shadow-lg cursor-pointer"
+      >
+        <i class="fa-brands fa-whatsapp text-base"></i>
+        <span>Finalizar Orçamento</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       DRAWER LATERAL: MEU ORÇAMENTO -> WHATSAPP
+  ========================================================= -->
+  <div id="drawer-backdrop" onclick="closeBudgetDrawer()" class="drawer-backdrop fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-xs"></div>
+
+  <aside
+    id="drawer-panel"
+    class="drawer-panel fixed top-0 right-0 bottom-0 z-50 w-full max-w-md bg-white shadow-2xl flex flex-col"
+    aria-label="Resumo do Orçamento"
+  >
+    <!-- Header Drawer -->
+    <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-atelie-ice/60">
+      <div>
+        <h3 class="font-display text-2xl font-bold text-atelie-deep leading-none">Meu Orçamento</h3>
+        <p class="text-xs text-slate-500 mt-1">Revise os itens e envie pronto no WhatsApp</p>
+      </div>
+      <button
+        type="button"
+        onclick="closeBudgetDrawer()"
+        class="w-9 h-9 rounded-full bg-white text-slate-500 hover:text-atelie-deep border border-slate-200 flex items-center justify-center cursor-pointer"
+        aria-label="Fechar"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Estado Vazio -->
+    <div id="drawer-empty" class="flex-1 flex flex-col items-center justify-center p-8 text-center">
+      <div class="w-16 h-16 rounded-full bg-atelie-ice text-atelie-blue flex items-center justify-center mb-4">
+        <i class="fa-solid fa-clipboard-list text-2xl"></i>
+      </div>
+      <p class="font-bold text-atelie-deep">Seu orçamento está vazio</p>
+      <p class="text-xs text-slate-500 mt-1 max-w-xs">
+        Adicione kits, caixaria, lembrancinhas ou itens sob orçamento para calcular e enviar direto no WhatsApp.
+      </p>
+      <button
+        type="button"
+        onclick="closeBudgetDrawer(); document.getElementById('catalogo').scrollIntoView({behavior:'smooth'});"
+        class="mt-5 px-5 py-2.5 rounded-xl bg-atelie-blue text-white text-xs font-bold cursor-pointer"
+      >
+        Explorar Catálogo
+      </button>
+    </div>
+
+    <!-- Estado Preenchido -->
+    <div id="drawer-filled" class="hidden flex-1 flex flex-col min-h-0">
+      <div class="flex-1 overflow-y-auto px-6 py-4 space-y-4">
+        <!-- Lista de itens -->
+        <div id="drawer-items-list" class="space-y-2.5"></div>
+        <div id="drawer-custom-list"></div>
+
+        <!-- Dados opcionais da festa -->
+        <div class="pt-4 border-t border-slate-200 space-y-3">
+          <p class="text-xs font-extrabold uppercase tracking-wider text-atelie-blue">Dados da Festa (opcional)</p>
+          <div class="grid grid-cols-2 gap-2.5">
+            <input
+              id="input-tema"
+              type="text"
+              placeholder="Tema (ex: Safari)"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-atelie-blue"
+            />
+            <input
+              id="input-nome-idade"
+              type="text"
+              placeholder="Nome e idade"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-atelie-blue"
+            />
+          </div>
+          <input
+            id="input-cidade"
+            type="text"
+            placeholder="Sua cidade / UF (ex: Cuiabá - MT)"
+            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-atelie-blue"
+          />
+          <textarea
+            id="input-obs"
+            rows="2"
+            placeholder="Observações (ex: modelos de caixinha preferidos, data da festa...)"
+            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-atelie-blue resize-none"
+          ></textarea>
+        </div>
+      </div>
+
+      <!-- Rodapé Drawer -->
+      <div class="p-5 border-t border-slate-200 bg-slate-50 space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Total Estimado</span>
+          <span id="drawer-total-price" class="text-2xl font-extrabold text-atelie-blue">R$ 0,00</span>
+        </div>
+
+        <button
+          type="button"
+          onclick="sendBudgetToWhatsApp()"
+          class="w-full py-3.5 px-5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg shadow-emerald-600/20 transition flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Enviar Orçamento no WhatsApp</span>
+        </button>
+
+        <button
+          type="button"
+          onclick="clearBudget()"
+          class="w-full py-1.5 text-xs font-semibold text-slate-400 hover:text-rose-500 transition cursor-pointer"
+        >
+          Limpar orçamento
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Lightbox de Ampliação de Foto -->
+  <div id="product-lightbox" onclick="closeLightbox()" class="hidden fixed inset-0 z-[60] bg-slate-900/80 backdrop-blur-xs flex items-center justify-center p-4">
+    <div onclick="event.stopPropagation()" class="relative max-w-lg w-full bg-white rounded-3xl overflow-hidden shadow-2xl p-4">
+      <button type="button" onclick="closeLightbox()" class="absolute top-5 right-5 z-10 w-9 h-9 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center transition cursor-pointer" aria-label="Fechar foto">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="rounded-3xl overflow-hidden bg-atelie-ice aspect-square">
+        <img id="lightbox-img" src="" alt="Visualização ampliada" class="w-full h-full object-cover bg-white" />
+      </div>
+      <div class="mt-3 px-1 flex items-center justify-between gap-3">
+        <div>
+          <p id="lightbox-title" class="font-display text-2xl font-bold text-atelie-deep leading-tight"></p>
+          <p class="text-[11px] text-slate-400">Imagem ilustrativa • Personalizamos no seu tema</p>
+        </div>
+        <span id="lightbox-price" class="shrink-0 text-sm font-extrabold text-atelie-blue bg-atelie-ice px-3 py-1.5 rounded-full"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast de Feedback -->
+  <div id="toast-notification" class="toast-msg fixed top-24 right-4 z-50 pointer-events-none">
+    <div class="bg-atelie-deep text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-lg flex items-center gap-2 border border-white/10">
+      <i class="fa-solid fa-circle-check text-emerald-400"></i>
+      <span id="toast-text">Item adicionado!</span>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
