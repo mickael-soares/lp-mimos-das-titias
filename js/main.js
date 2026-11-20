@@ -538,7 +538,16 @@ function addToCart(itemId, qtyOverride = null) {
 
   saveState();
   syncUI();
+  triggerBadgePop();
   showToast(`${displayName} adicionado ao orçamento!`);
+}
+
+function triggerBadgePop() {
+  const badge = document.getElementById('header-budget-badge');
+  if (!badge) return;
+  badge.classList.remove('badge-pop');
+  void badge.offsetWidth;
+  badge.classList.add('badge-pop');
 }
 
 function updateCartQty(key, newQty) {
@@ -729,7 +738,7 @@ function renderCatalogPanel() {
     : '';
 
   const cardsHTML = cat.items
-    .map(item => {
+    .map((item, idx) => {
       const isPackaged = Boolean(item.supportsPackaging && state.lembrancinhaWithPackaging);
       const displayPrice = isPackaged ? item.price + CONFIG.packagingExtraPrice : item.price;
       const key = getCartKey(item.id, isPackaged);
@@ -739,7 +748,7 @@ function renderCatalogPanel() {
       const isFeatured = Boolean(item.featured);
 
       const cardBorder = isMaster
-        ? 'border-atelie-gold/60 bg-gradient-to-b from-atelie-goldSoft/60 to-white'
+        ? 'master-card-glow border-atelie-gold/60 bg-gradient-to-b from-atelie-goldSoft/60 to-white'
         : isFeatured
           ? 'border-atelie-blue/40 bg-white ring-1 ring-atelie-blue/10'
           : 'border-slate-200/80 bg-white';
@@ -763,7 +772,7 @@ function renderCatalogPanel() {
         : '';
 
       return `
-        <article class="product-card ${inCart ? 'in-cart' : ''} ${cardBorder} border rounded-3xl p-5 flex flex-col justify-between shadow-sm relative">
+        <article style="animation-delay: ${idx * 80}ms" class="stagger-card product-card ${inCart ? 'in-cart' : ''} ${cardBorder} border rounded-3xl p-5 flex flex-col justify-between shadow-sm relative">
           <div>
             ${imageBlock}
 
@@ -1136,6 +1145,16 @@ function sendBudgetToWhatsApp() {
 
   lines.push('');
   lines.push('Podemos confirmar disponibilidade e prazo de produção?');
+
+  // Micro-confete festivo ao enviar orçamento
+  if (typeof confetti === 'function') {
+    confetti({
+      particleCount: 45,
+      spread: 65,
+      origin: { y: 0.72 },
+      colors: ['#1665B8', '#C5ECFF', '#C9A45C', '#F9E4E8']
+    });
+  }
 
   const text = encodeURIComponent(lines.join('\n'));
   const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${text}`;
