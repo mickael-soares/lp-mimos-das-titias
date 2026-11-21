@@ -989,6 +989,10 @@ function renderBudgetDrawer() {
   if (stickyBar) {
     stickyBar.classList.toggle('visible', totals.hasAny);
   }
+  const floatingWa = document.getElementById('floating-whatsapp-btn');
+  if (floatingWa) {
+    floatingWa.classList.toggle('hidden', totals.hasAny);
+  }
   if (stickyCount) {
     const parts = [];
     if (totals.distinctCount > 0) parts.push(`${totals.distinctCount} ${totals.distinctCount === 1 ? 'item' : 'itens'}`);

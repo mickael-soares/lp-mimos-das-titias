@@ -321,11 +321,104 @@ input[type="number"] {
   animation: badgePop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+/* ===== ANIMAÇÕES TEMÁTICAS (ATELIÊ & FESTA) ===== */
+
+@keyframes balloonSway {
+  0%, 100% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(2.5deg);
+  }
+}
+
+.balloon-float-1 {
+  animation: balloonSway 6.5s ease-in-out infinite;
+}
+
+.balloon-float-2 {
+  animation: balloonSway 7.8s ease-in-out 1.2s infinite;
+}
+
+.balloon-float-3 {
+  animation: balloonSway 7s ease-in-out 2.1s infinite;
+}
+
+@keyframes sparkleTwinkle {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.75) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.18) rotate(18deg);
+  }
+}
+
+.sparkle-twinkle-1 {
+  animation: sparkleTwinkle 2.8s ease-in-out infinite;
+}
+
+.sparkle-twinkle-2 {
+  animation: sparkleTwinkle 3.4s ease-in-out 0.9s infinite;
+}
+
+.sparkle-twinkle-3 {
+  animation: sparkleTwinkle 3.1s ease-in-out 1.7s infinite;
+}
+
+@keyframes confettiDrift {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(-12px) rotate(22deg);
+    opacity: 0.9;
+  }
+}
+
+.confetti-drift-1 {
+  animation: confettiDrift 5.2s ease-in-out infinite;
+}
+
+.confetti-drift-2 {
+  animation: confettiDrift 6.4s ease-in-out 1.3s infinite;
+}
+
+@keyframes dashFlow {
+  to {
+    stroke-dashoffset: -36;
+  }
+}
+
+.craft-stitch-flow {
+  stroke-dasharray: 6 6;
+  animation: dashFlow 5s linear infinite;
+}
+
+.logo-scissors-hover {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.group:hover .logo-scissors-hover {
+  transform: rotate(-10deg) scale(1.08);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-float-gentle,
   .float-slow,
   .float-delay-1,
   .float-delay-2,
+  .balloon-float-1,
+  .balloon-float-2,
+  .balloon-float-3,
+  .sparkle-twinkle-1,
+  .sparkle-twinkle-2,
+  .sparkle-twinkle-3,
+  .confetti-drift-1,
+  .confetti-drift-2,
+  .craft-stitch-flow,
   .marquee-track,
   .stagger-card,
   .btn-shimmer::after,

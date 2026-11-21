@@ -17,11 +17,23 @@
   <meta name="author" content="Mickael Soares">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23C5ECFF'/%3E%3Cg fill='none' stroke='%231665B8' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M23 12L35 33M41 12L29 33'/%3E%3Cellipse cx='22' cy='43' rx='6' ry='8' transform='rotate(14 22 43)'/%3E%3Cellipse cx='42' cy='43' rx='6' ry='8' transform='rotate(-14 42 43)'/%3E%3C/g%3E%3Cpath d='M32 54.5s-3.5-2.3-3.5-4.6a2.1 2.1 0 0 1 3.5-1.5 2.1 2.1 0 0 1 3.5 1.5c0 2.3-3.5 4.6-3.5 4.6z' fill='%2338BDF8'/%3E%3C/svg%3E">
 
-  <!-- Open Graph -->
+  <!-- Open Graph / WhatsApp Preview -->
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mickael-soares.github.io/lp-mimos-das-titias/">
   <meta property="og:title" content="Ateliê Mimos das Titias | Kit Mini Festa e Papelaria Personalizada">
   <meta property="og:description" content="Personalizados em papelaria com acabamento de luxo para todo o Brasil e Kits Festa na Mesa em VG e Cuiabá. Simule seu orçamento e envie direto no WhatsApp!">
+  <meta property="og:image" content="https://mickael-soares.github.io/lp-mimos-das-titias/images/og-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Ateliê Mimos das Titias">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ateliê Mimos das Titias | Kit Mini Festa e Papelaria Personalizada">
+  <meta name="twitter:description" content="Monte seu orçamento online e envie direto no WhatsApp. VG/Cuiabá e envio para todo o Brasil.">
+  <meta name="twitter:image" content="https://mickael-soares.github.io/lp-mimos-das-titias/images/og-preview.jpg">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -72,7 +84,7 @@
       <!-- Marca / Logo Vetorial -->
       <a href="#inicio" class="flex items-center gap-3 group">
         <div class="w-12 h-12 rounded-full bg-atelie-sky flex items-center justify-center border border-atelie-blue/20 shadow-sm group-hover:scale-105 transition">
-          <svg viewBox="0 0 64 64" class="w-8 h-8 text-atelie-blue" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg viewBox="0 0 64 64" class="w-8 h-8 text-atelie-blue logo-scissors-hover" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M23 10L35 33M41 10L29 33" />
             <ellipse cx="22" cy="43" rx="6" ry="8" transform="rotate(14 22 43)" />
             <ellipse cx="42" cy="43" rx="6" ry="8" transform="rotate(-14 42 43)" />
@@ -131,8 +143,55 @@
     <!-- =========================================================
          HERO SECTION
     ========================================================= -->
-    <section id="inicio" class="bg-atelier-pattern relative overflow-hidden pt-12 pb-16 lg:pt-20 lg:pb-24">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+    <section id="inicio" class="bg-atelier-pattern relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28">
+      <!-- Camada Decorativa 3D Realista (Balões Perolados, Estrelas Strass e Confetes) -->
+      <div class="absolute inset-0 pointer-events-none select-none overflow-hidden" aria-hidden="true">
+        <!-- Balões 3D Perolados Azul & Rosa (Esquerda) -->
+        <img
+          src="images/deco-balao-azul.webp"
+          alt=""
+          class="hidden md:block absolute -left-2 lg:left-2 top-12 w-24 lg:w-32 xl:w-36 drop-shadow-md opacity-95 balloon-float-1"
+        />
+
+        <!-- Balões 3D Dourado Champagne & Azul (Direita) -->
+        <img
+          src="images/deco-balao-dourado.webp"
+          alt=""
+          class="hidden md:block absolute -right-2 lg:right-2 top-10 w-24 lg:w-32 xl:w-36 drop-shadow-md opacity-95 balloon-float-2"
+        />
+
+        <!-- Estrelas 3D Metálicas com Strass (Twinkle) -->
+        <img
+          src="images/deco-estrela-dourada.webp"
+          alt=""
+          class="absolute left-[46%] top-10 w-7 h-7 sm:w-8 sm:h-8 drop-shadow-sm sparkle-twinkle-1"
+        />
+        <img
+          src="images/deco-estrela-dourada.webp"
+          alt=""
+          class="absolute left-[55%] top-[24%] w-6 h-6 drop-shadow-sm sparkle-twinkle-2 hidden lg:block"
+        />
+        <img
+          src="images/deco-estrela-dourada.webp"
+          alt=""
+          class="absolute right-[10%] top-[52%] w-7 h-7 drop-shadow-sm sparkle-twinkle-3 hidden md:block"
+        />
+        <img
+          src="images/deco-estrela-dourada.webp"
+          alt=""
+          class="absolute left-[57%] bottom-20 w-6 h-6 drop-shadow-sm sparkle-twinkle-1 hidden lg:block"
+        />
+
+        <!-- Confetes Pastéis Flutuantes -->
+        <span class="absolute left-[18%] top-10 w-3 h-1.5 rounded-full bg-atelie-gold/70 rotate-12 confetti-drift-1"></span>
+        <span class="absolute left-[36%] top-16 w-2 h-2 rounded-full bg-atelie-blue/45 confetti-drift-2"></span>
+        <span class="absolute right-[32%] top-12 w-3 h-1.5 rounded-full bg-rose-300/80 -rotate-12 confetti-drift-1"></span>
+        <span class="absolute left-[12%] bottom-24 w-2.5 h-2.5 rounded-full bg-sky-400/60 confetti-drift-2"></span>
+        <span class="absolute left-[44%] bottom-20 w-3 h-1.5 rounded-full bg-atelie-gold/65 rotate-45 confetti-drift-1"></span>
+        <span class="absolute right-[14%] bottom-24 w-2.5 h-1.5 rounded-full bg-rose-300/75 -rotate-20 confetti-drift-2"></span>
+      </div>
+
+      <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         <!-- Texto Hero -->
         <div class="lg:col-span-7 fade-up">
           <div class="flex flex-wrap items-center gap-2 mb-5">
@@ -176,6 +235,11 @@
             <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-atelie-blue"></i> Qualquer tema infantil ou adulto</span>
             <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-atelie-blue"></i> Orçamento direto no WhatsApp</span>
           </div>
+
+          <!-- Linha Pontilhada Artesanal Animada -->
+          <svg class="mt-6 w-64 sm:w-80 h-5 text-atelie-blue/40" viewBox="0 0 320 20" fill="none" aria-hidden="true">
+            <path d="M2 10 Q 80 2, 160 10 T 318 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" class="craft-stitch-flow"/>
+          </svg>
         </div>
 
         <!-- Mosaico Fotográfico + Glassmorphism Hero -->
@@ -573,19 +637,138 @@
           </div>
         </div>
       </div>
+
+      <!-- Divisor Curvo para Prova Social -->
+      <div class="mt-14 -mb-16 overflow-hidden leading-none pointer-events-none">
+        <svg viewBox="0 0 1440 56" preserveAspectRatio="none" class="w-full h-8 sm:h-11 fill-white" aria-hidden="true">
+          <path d="M0,28 C360,64 720,0 1080,28 C1260,42 1380,34 1440,22 L1440,56 L0,56 Z"></path>
+        </svg>
+      </div>
     </section>
 
     <!-- =========================================================
-         CTA FINAL
+         PROVA SOCIAL (AVALIAÇÕES ESTILO INSTAGRAM)
     ========================================================= -->
-    <section class="py-16 px-4 sm:px-6 bg-white">
+    <section id="avaliacoes" class="py-16 lg:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-10 fade-up">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-atelie-goldSoft border border-atelie-gold/40 text-xs font-bold text-atelie-deep uppercase tracking-wider">
+            <i class="fa-solid fa-star text-atelie-gold"></i> Carinho em Cada Entrega
+          </span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold text-atelie-deep mt-3">
+            Quem já celebrou com o Ateliê
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2">
+            Detalhes feitos à mão que encantam mamães e convidados em Várzea Grande, Cuiabá e em todo o Brasil.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 fade-up">
+          <!-- Avaliação 1 -->
+          <article class="bg-atelie-paper border border-atelie-sky/80 rounded-3xl p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3.5 mb-4">
+                <img src="images/kit-mesa-completo.webp" alt="Kit Festa na Mesa Completo" loading="lazy" class="w-14 h-14 rounded-2xl object-cover border border-atelie-sky shrink-0" />
+                <div class="min-w-0">
+                  <p class="font-bold text-sm text-atelie-deep truncate">Camila S. • Cuiabá - MT</p>
+                  <div class="flex items-center gap-0.5 text-atelie-gold text-xs mt-0.5" aria-label="5 estrelas">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="inline-block mt-1 text-[11px] font-bold text-atelie-blue bg-atelie-ice px-2.5 py-0.5 rounded-full">Kit Festa na Mesa Completo</span>
+                </div>
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                “Ficou perfeito demais! O mini arco de balão e o painel deram outra cara para a festa em casa. Muito prático e delicado.”
+              </p>
+            </div>
+          </article>
+
+          <!-- Avaliação 2 -->
+          <article class="bg-atelie-paper border border-atelie-gold/45 rounded-3xl p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3.5 mb-4">
+                <img src="images/caixaria-master.webp" alt="Caixaria Master" loading="lazy" class="w-14 h-14 rounded-2xl object-cover border border-atelie-gold/40 shrink-0" />
+                <div class="min-w-0">
+                  <p class="font-bold text-sm text-atelie-deep truncate">Juliana M. • Várzea Grande</p>
+                  <div class="flex items-center gap-0.5 text-atelie-gold text-xs mt-0.5" aria-label="5 estrelas">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="inline-block mt-1 text-[11px] font-bold text-atelie-deep bg-atelie-goldSoft px-2.5 py-0.5 rounded-full">Caixaria Master • Stitch</span>
+                </div>
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                “Os laços de cetim e o acabamento com pedraria são impecáveis. Todo mundo na festa perguntou onde eu tinha encomendado!”
+              </p>
+            </div>
+          </article>
+
+          <!-- Avaliação 3 -->
+          <article class="bg-atelie-paper border border-atelie-sky/80 rounded-3xl p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3.5 mb-4">
+                <img src="images/diversao-completo.webp" alt="Kit Diversão Completo" loading="lazy" class="w-14 h-14 rounded-2xl object-cover border border-atelie-sky shrink-0" />
+                <div class="min-w-0">
+                  <p class="font-bold text-sm text-atelie-deep truncate">Renata A. • Envio Nacional</p>
+                  <div class="flex items-center gap-0.5 text-atelie-gold text-xs mt-0.5" aria-label="5 estrelas">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="inline-block mt-1 text-[11px] font-bold text-atelie-blue bg-atelie-ice px-2.5 py-0.5 rounded-full">Kit Diversão • Bluey</span>
+                </div>
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                “Chegou super bem embalado e dentro do prazo. As crianças amaram o livrinho de colorir e a massinha personalizados!”
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CTA FINAL TEMÁTICO (BALÕES + BRILHOS)
+    ========================================================= -->
+    <section class="pb-16 pt-4 px-4 sm:px-6 bg-white">
       <div class="max-w-5xl mx-auto rounded-[2rem] bg-gradient-to-br from-atelie-deep via-atelie-blue to-[#1E7AD6] p-8 sm:p-12 text-center text-white shadow-xl relative overflow-hidden fade-up">
+        <!-- Balões 3D e estrelas metálicas no CTA -->
+        <div class="absolute inset-0 pointer-events-none select-none overflow-hidden" aria-hidden="true">
+          <img
+            src="images/deco-balao-azul.webp"
+            alt=""
+            class="hidden sm:block absolute left-3 top-5 w-24 md:w-28 opacity-85 drop-shadow-lg balloon-float-1"
+          />
+          <img
+            src="images/deco-balao-dourado.webp"
+            alt=""
+            class="hidden sm:block absolute right-3 top-6 w-24 md:w-28 opacity-85 drop-shadow-lg balloon-float-2"
+          />
+          <img
+            src="images/deco-estrela-dourada.webp"
+            alt=""
+            class="absolute left-[19%] top-8 w-6 h-6 sparkle-twinkle-1"
+          />
+          <img
+            src="images/deco-estrela-dourada.webp"
+            alt=""
+            class="absolute right-[19%] top-10 w-7 h-7 sparkle-twinkle-2"
+          />
+          <img
+            src="images/deco-estrela-dourada.webp"
+            alt=""
+            class="absolute left-[22%] bottom-8 w-5 h-5 sparkle-twinkle-3"
+          />
+          <img
+            src="images/deco-estrela-dourada.webp"
+            alt=""
+            class="absolute right-[18%] bottom-10 w-6 h-6 sparkle-twinkle-1"
+          />
+        </div>
+
         <div class="relative z-10 max-w-2xl mx-auto">
           <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/15 text-xs font-bold uppercase tracking-wider mb-4">
             <i class="fa-solid fa-sparkles text-atelie-sky"></i> Ateliê Mimos das Titias
           </span>
           <h2 class="font-display text-3xl sm:text-5xl font-bold leading-tight">
-            Pronta para deixar sua festa inesquecível?
+            Pronta para deixar sua festa <span class="italic text-atelie-sky">inesquecível?</span>
           </h2>
           <p class="text-atelie-sky/90 text-sm sm:text-base mt-3">
             Simule seus itens no catálogo ou chame diretamente no WhatsApp para montar um projeto exclusivo no seu tema.
@@ -601,7 +784,7 @@
             <button
               type="button"
               onclick="openDirectWhatsApp()"
-              class="px-7 py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm transition cursor-pointer shadow-md"
+              class="btn-shimmer px-7 py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm transition cursor-pointer shadow-md"
             >
               <i class="fa-brands fa-whatsapp mr-2 text-base"></i>Chamar no WhatsApp
             </button>
@@ -669,6 +852,20 @@
       </div>
     </div>
   </footer>
+
+  <!-- =========================================================
+       BOTÃO FLUTUANTE WHATSAPP INTELIGENTE (OCULTA QUANDO HÁ ITENS NO CARRINHO)
+  ========================================================= -->
+  <button
+    id="floating-whatsapp-btn"
+    type="button"
+    onclick="openDirectWhatsApp()"
+    title="Falar no WhatsApp"
+    aria-label="Falar no WhatsApp"
+    class="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-xl shadow-emerald-500/35 flex items-center justify-center text-2xl hover:scale-110 active:scale-95 transition cursor-pointer"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </button>
 
   <!-- =========================================================
        BARRA FLUTUANTE INFERIOR DO ORÇAMENTO (APARECE AO ADICIONAR ITENS)
