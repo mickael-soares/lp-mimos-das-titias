@@ -10,6 +10,10 @@ Landing page responsiva de alta conversão para **Ateliê Mimos das Titias** (`@
 ├── js/
 │   └── main.js
 ├── index.html
+├── LICENSE
 ├── .gitignore
 └── README.md
 ```
+
+## Licença
+Este projeto é proprietário (**All Rights Reserved**). Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
